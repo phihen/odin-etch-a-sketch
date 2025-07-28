@@ -10,8 +10,7 @@ function createGrid(gridSize) {
     for(let index = 0; index < (gridSize*gridSize); index++) {
         const divElement = document.createElement("div");
         divElement.addEventListener('mouseover', changeColor);
-        let flexItemSize = Math.floor(gridContainer.clientHeight / gridSize) -2; //2 has to be substracted because of the border
-        divElement.style.flex = `${flexItemSize}px`;
+        divElement.style.width = `calc(60vh / ${gridSize})`;
         gridContainer.appendChild(divElement);
         divElements.push(divElement);
     }
