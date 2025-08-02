@@ -17,7 +17,10 @@ function createGrid(gridSize) {
 }
 
 function changeColor(event) {
-    event.target.style.backgroundColor = "black";
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    event.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
 
 resetButton.addEventListener('click', (event) => {
