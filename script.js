@@ -21,6 +21,10 @@ function changeColor(event) {
     let green = Math.floor(Math.random() * 256);
     let blue = Math.floor(Math.random() * 256);
     event.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+    if(+event.target.style.opacity < 1) {
+        event.target.style.opacity = String(+event.target.style.opacity + 0.1);
+    }
 }
 
 resetButton.addEventListener('click', (event) => {
