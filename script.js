@@ -29,7 +29,8 @@ function changeColor(event) {
 
 resetButton.addEventListener('click', (event) => {
     divElements.forEach((element) => {
-        element.style.backgroundColor = "white";
+        element.style.backgroundColor = "";
+        element.style.opacity = "";
     })
 });
 
